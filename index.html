@@ -2,13 +2,14 @@
 <html>
 <head>
 	<title>LLL34uns' website</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+	<meta charset="utf-8">
 	<style type="text/css">
 		body {
 			background: linear-gradient(to left, red , blue);
 			font-size: 23px;
 			text-align: center;
-			width: 93%;
+			width: 100%;
+			margin: 0;
 		}
 		h3 {
 			font-size: 34px;
@@ -17,23 +18,71 @@
 			color: red;
 			text-decoration: none;
 		}
+		.belekas {
+			background-color: darkgreen;
+			color: white;
+			padding: 10px;
+			border-radius: 5px;
+		}
+		.belekas:hover {
+			background-color: white;
+			color: darkgreen;
+		}
+		.menu {
+		background-color: white;
+		color: black;
+		position: fixed;
+		top: 0;
+		left: 0;
+		padding: 8px 12px;
+		}
+		.hidden {
+			display: none;
+		}
 	</style>
 </head>
 <body>
-<div class="container"><h3>Hi,</h3>
-<p>I'm Ignas and you can call me LLL34uns. You can find me on
-	<a href="http://roblox.com" target="top">
-		Roblox
-	</a>
-with this username. I'm looking like this in Roblox:</p>
-<img src="igniukas.jpg">
- <p>And there's one of my videos uploaded to youtube:</p>
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ik68RDUhzpc?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-<p>For me - this is the best <img src="smile.png" height="25px">.</p>
-<p><a href="https://www.youtube.com/channel/UCijQOt3tLY4g_jBfkT3OnmA" target="top">
-	<button class="btn btn-success">View all my videos</button>
-</a>
-</p>
-</div>
+	<div class="menu">
+		<div class="white">LLL34uns' page</div>
+	</div>
+	<div class="container">
+		<h3>Hi,</h3>
+		<p>
+			I'm Ignas and you can call me LLL34uns. You can find me on
+			<a href="http://roblox.com" target="top">
+				Roblox
+			</a>
+			with this username. I'm looking like this in Roblox:
+		</p>
+		<img src="igniukas.jpg">
+		<p>And there's one of my videos uploaded to youtube:</p>
+		<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ik68RDUhzpc?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		<p>For me - this is the best <img src="smile.png" height="25px">.</p>
+		<p>
+			<a href="https://www.youtube.com/channel/UCijQOt3tLY4g_jBfkT3OnmA" target="top">
+				<button class="belekas">View all my videos</button>
+			</a>
+		</p>
+		<p>
+			<button class="belekas" id="more_about_me_button">More about me</button>
+		</p>
+		<p id="more_about_me_text" class="hidden">
+			Find me on Facebook: Ignas Norvaiša. I'm from Lithuania so just two of my videos are in English and the others are in Lithuanian. Please subscribe to my channel (:! I can speak English, so you can chat with me on Roblox. And I'm PRO at some games in Roblox. I can help you! Remember, SUBSCRIBE TO MY CHANNEL AND LIKE MY VIDEOS. And remember to send me a friend request in Roblox.
+		</p>
+	</div>
+	<script type="text/javascript">
+		var moreAboutMeButton = document.getElementById("more_about_me_button");
+		var moreAboutMeText = document.getElementById("more_about_me_text");
+
+		moreAboutMeButton.addEventListener("click", function() {
+			var isHidden = moreAboutMeText.classList.contains("hidden");
+
+			if (isHidden === true) {
+				moreAboutMeText.classList.remove("hidden");
+			} else {
+				moreAboutMeText.classList.add("hidden");
+			}
+		});
+	</script>
 </body>
 </html>
