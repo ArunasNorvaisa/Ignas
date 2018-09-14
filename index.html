@@ -81,11 +81,9 @@
 		moreAboutMeButton.addEventListener("click", function() {
 			var isHidden = moreAboutMeText.classList.contains("hidden");
 
-			if (isHidden === true) {
-				moreAboutMeText.classList.remove("hidden");
-			} else {
+			isHidden ?
+				moreAboutMeText.classList.remove("hidden") :
 				moreAboutMeText.classList.add("hidden");
-			}
 		});
 	</script>
 </body>
