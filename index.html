@@ -79,11 +79,7 @@
 		var moreAboutMeText = document.getElementById("more_about_me_text");
 
 		moreAboutMeButton.addEventListener("click", function() {
-			var isHidden = moreAboutMeText.classList.contains("hidden");
-
-			isHidden ?
-				moreAboutMeText.classList.remove("hidden") :
-				moreAboutMeText.classList.add("hidden");
+            moreAboutMeText.classList.toggle("hidden");
 		});
 	</script>
 </body>
